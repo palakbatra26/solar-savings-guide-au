@@ -10,6 +10,7 @@ import StateRebates from "@/components/StateRebates";
 import FeedInTariffs from "@/components/FeedInTariffs";
 import FAQ from "@/components/FAQ";
 import Navigation from "@/components/Navigation";
+import { buttonActions } from "@/utils/buttonActions";
 
 const Index = () => {
   return (
@@ -98,7 +99,7 @@ const Index = () => {
                 <li>• Must be installed by CEC-accredited professional</li>
                 <li>• STCs decrease annually and end in 2030</li>
               </ul>
-              <Button className="mt-4 w-full">Get Free Quotes</Button>
+              <Button className="mt-4 w-full" onClick={buttonActions.getFreeQuotes}>Get Free Quotes</Button>
             </CardContent>
           </Card>
 
@@ -117,7 +118,7 @@ const Index = () => {
                 <li>• Ongoing revenue rather than one-time discount</li>
                 <li>• Helps businesses lower carbon footprint</li>
               </ul>
-              <Button className="mt-4 w-full" variant="outline">Learn More</Button>
+              <Button className="mt-4 w-full" variant="outline" onClick={() => buttonActions.learnMoreAboutState('federal')}>Learn More</Button>
             </CardContent>
           </Card>
         </div>
@@ -139,7 +140,7 @@ const Index = () => {
           <p className="text-xl mb-8 opacity-90">
             Compare quotes from up to 7 installers in your area now and maximize your solar rebates.
           </p>
-          <Button size="lg" variant="secondary" className="text-blue-600 font-semibold">
+          <Button size="lg" variant="secondary" className="text-blue-600 font-semibold" onClick={buttonActions.compareNow}>
             COMPARE NOW - FREE QUOTES
           </Button>
         </div>

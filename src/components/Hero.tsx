@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { buttonActions } from "@/utils/buttonActions";
 
 const Hero = () => {
   return (
@@ -29,10 +30,10 @@ const Hero = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <Button size="lg" className="text-lg px-8 py-3">
+          <Button size="lg" className="text-lg px-8 py-3" onClick={buttonActions.findMyRebates}>
             Find My Rebates
           </Button>
-          <Button size="lg" variant="outline" className="text-lg px-8 py-3">
+          <Button size="lg" variant="outline" className="text-lg px-8 py-3" onClick={buttonActions.compareInstallers}>
             Compare Installers
           </Button>
         </div>

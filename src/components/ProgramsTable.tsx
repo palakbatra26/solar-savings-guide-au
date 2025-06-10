@@ -1,7 +1,7 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { buttonActions } from "@/utils/buttonActions";
 
 const ProgramsTable = () => {
   const programs = [
@@ -59,7 +59,7 @@ const ProgramsTable = () => {
     <div className="space-y-4">
       <div className="text-center mb-8">
         <p className="text-sm text-muted-foreground">Australian Solar Rebate Programs & Incentives by State as at November 14th 2024</p>
-        <Button className="mt-4">
+        <Button className="mt-4" onClick={buttonActions.compareNow}>
           COMPARE NOW - Up to 7 Free Quotes
         </Button>
       </div>

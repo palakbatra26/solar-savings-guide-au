@@ -1,8 +1,8 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { buttonActions } from "@/utils/buttonActions";
 
 const StateRebates = () => {
   const states = [
@@ -126,10 +126,10 @@ const StateRebates = () => {
                   ))}
                 </div>
                 <div className="mt-6 flex gap-3">
-                  <Button>
+                  <Button onClick={() => buttonActions.learnMoreAboutState(state.name)}>
                     Learn More About {state.name} Rebates
                   </Button>
-                  <Button variant="outline">
+                  <Button variant="outline" onClick={() => buttonActions.getStateRebates(state.name)}>
                     Get {state.name} Installer Quotes
                   </Button>
                 </div>

@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
+import { buttonActions } from "@/utils/buttonActions";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,7 +21,7 @@ const Navigation = () => {
             <a href="#state-rebates" className="text-gray-700 hover:text-blue-600 transition-colors">State Rebates</a>
             <a href="#feed-in" className="text-gray-700 hover:text-blue-600 transition-colors">Feed-in Tariffs</a>
             <a href="#faq" className="text-gray-700 hover:text-blue-600 transition-colors">FAQ</a>
-            <Button>Get Free Quotes</Button>
+            <Button onClick={buttonActions.getFreeQuotes}>Get Free Quotes</Button>
           </div>
           
           <button 
@@ -43,7 +44,7 @@ const Navigation = () => {
               <a href="#state-rebates" className="text-gray-700 hover:text-blue-600 transition-colors">State Rebates</a>
               <a href="#feed-in" className="text-gray-700 hover:text-blue-600 transition-colors">Feed-in Tariffs</a>
               <a href="#faq" className="text-gray-700 hover:text-blue-600 transition-colors">FAQ</a>
-              <Button className="w-full">Get Free Quotes</Button>
+              <Button className="w-full" onClick={buttonActions.getFreeQuotes}>Get Free Quotes</Button>
             </div>
           </div>
         )}
